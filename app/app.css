@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import "tailwindcss";
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+#hero-swiper .swiper-button-prev,
+#hero-swiper .swiper-button-next {
+  color: white !important;
+  font-weight: bold !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hero-swiper .swiper-button-prev {
+  left: 24px !important; /* farther from edge */
+}
+
+#hero-swiper .swiper-button-next {
+  right: 24px !important;
+}
+
+#hero-swiper .swiper-button-prev::after,
+#hero-swiper .swiper-button-next::after {
+  font-size: 24px !important;
+  font-weight: bold;
+}
+
+/* Bullets */
+#hero-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 15px !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 16px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 9999px;
+  gap: 8px;
+
+  /* Add this */
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+#hero-swiper .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: white !important;
+  opacity: 0.5;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+#hero-swiper .swiper-pagination-bullet-active {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: white;
+  opacity: 1;
+}
+/* ======================================================  */
+#recommended-swiper {
+  position: relative !important;
+}
+#recommended-swiper .swiper-button-prev,
+#recommended-swiper .swiper-button-next {
+  color: white !important;
+  font-weight: bold !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#recommended-swiper .swiper-button-prev {
+  left: 0 !important; /* farther from edge */
+}
+
+#recommended-swiper .swiper-button-next {
+  right: 0 !important;
+}
+
+#recommended-swiper .swiper-button-prev::after,
+#recommended-swiper .swiper-button-next::after {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+.recommended-card-title {
+  font-family: 'Onest';
+  font-weight: 500;
+}
+
+* {
+  font-family: 'Onest';
+}
+
+.recommended-card-title {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important; 
+  -webkit-box-orient: vertical !important;  
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+input {
+  font-family: 'Onest', sans-serif;
+}
+
+/* .custom-radio {
+  appearance: none;
+  border: 2px solid #6b7280;
+  border-radius: 9999px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.custom-radio:checked {
+  background-color: #4885FF;
+  border-color: #4885FF;
+}
+
+.custom-radio:focus {
+  outline: none;
+}
+
+.custom-radio:focus-visible {
+  border-color: #4885FF;
+  background-color: #4885FF;
+}
+
+
+.custom-radio:focus-visible ~ .variation-container,
+.custom-radio:checked:focus-visible ~ .variation-container {
+  border-color: #4885FF;
+} */
+
+.custom-radio {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #6b7280; /* gray-500 */
+  border-radius: 9999px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-radio:checked::before {
+  content: '';
+  position: absolute;
+  top: 5px;   /* adjust for spacing */
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #4885FF;
+}
+
+.custom-radio:checked {
+  border-color: #4885FF;
+}
+
+/* Optional: add outline on keyboard focus */
+.custom-radio:focus-visible {
+  outline: 2px solid #4885FF;
+  outline-offset: 2px;
+}
+
+/* Change container border if radio is checked */
+.custom-container:has(input:checked) {
+  border-color: #4885FF;
+  border-width: 2px;
+}
+
+.custom-radio-purple {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #6b7280; /* gray-500 */
+  border-radius: 9999px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-radio-purple:checked::before {
+  content: '';
+  position: absolute;
+  top: 5px;   /* adjust for spacing */
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #8C54D3;
+}
+
+.custom-radio-purple:checked {
+  border-color: #8C54D3;
+}
+
+/* Optional: add outline on keyboard focus */
+.custom-radio-purple:focus-visible {
+  outline: 2px solid #8C54D3;
+  outline-offset: 2px;
+}
+
+.buynow-productpage-button:hover {
+  background: radial-gradient(100% 100% at 0% 0%, rgba(212, 179, 255, 0.867) 0%, rgba(126, 59, 212, 0.867) 68.08%);
+}
