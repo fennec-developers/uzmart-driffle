@@ -3,9 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
+=======
+    "build": "vite build",
+    "dev": "vite",
+    "start": "vite preview"
+>>>>>>> b376e15 (Reinitialize Git repository and add files)
   },
   "dependencies": {
     "@headlessui/react": "^2.2.2",
@@ -15,7 +21,13 @@
     "lucide-react": "^0.503.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+<<<<<<< HEAD
     "react-router": "^7.5.1"
+=======
+    "react-icons": "^5.5.0",
+    "react-router": "^7.5.1",
+    "swiper": "^12.0.2"
+>>>>>>> b376e15 (Reinitialize Git repository and add files)
   },
   "devDependencies": {
     "@react-router/dev": "^7.5.1",
@@ -29,4 +41,8 @@
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b376e15 (Reinitialize Git repository and add files)

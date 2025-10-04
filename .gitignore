@@ -4,3 +4,8 @@
 # React Router
 /.react-router/
 /build/
+<<<<<<< HEAD
+=======
+
+.vercel
+>>>>>>> b376e15 (Reinitialize Git repository and add files)
